@@ -1,0 +1,24 @@
+{
+  "name": "ui-kit",
+  "version": "0.1.0",
+  "description": "UI-kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dendavidov/ui-kit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dendavidov/ui-kit/issues"
+  },
+  "homepage": "https://github.com/dendavidov/ui-kit#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.6"
+  }
+}
