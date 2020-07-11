@@ -2,12 +2,12 @@
   "name": "@dendavidov/ui-kit",
   "version": "0.1.0",
   "description": "UI-kit",
-  "main": "build/lib/index.js",
-  "typings": "./build/lib/index.d.ts",
+  "main": "build/index.js",
+  "typings": "./build/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook",
-    "build": "tsc"
+    "build": "rimraf build && tsc --build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/dendavidov/ui-kit#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/pickers": "^3.2.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.9.6"
@@ -32,6 +34,11 @@
     "babel-loader": "^8.1.0",
     "prettier": "^2.0.5",
     "react-docgen-typescript-loader": "^3.7.2",
+    "rimraf": "^3.0.2",
     "ts-loader": "^8.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
