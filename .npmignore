@@ -5,3 +5,12 @@ node_modules
 *.stories.tsx
 
 coverage
+.babelrc
+.editorconfig
+.eslintrc.js
+.huskyrc
+.lintstagedrc
+.prettierrc
+jest.config.js
+jest.coverage.ignore.js
+tsconfig.json
