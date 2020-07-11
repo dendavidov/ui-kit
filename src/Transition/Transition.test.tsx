@@ -12,10 +12,10 @@ describe('<Transition />', () => {
     expect(() => render(<Transition />)).not.toThrowError();
   });
 
-  // it('renders Slide component', () => {
-  //   const { container } = render(<Transition />);
-  //
-  //   const slideComponent = container.querySelector('.mock-Slide');
-  //   expect(slideComponent).not.toBeNull();
-  // });
+  it('renders Slide component', () => {
+    const { container } = render(<Transition />);
+
+    const slideComponent = container.querySelector('.mock-Slide');
+    expect(slideComponent).not.toBeNull();
+  });
 });

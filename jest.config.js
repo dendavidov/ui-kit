@@ -1,7 +1,7 @@
 const coveragePathIgnorePatterns = require('./jest.coverage.ignore.js');
 
 module.exports = {
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/src', '<rootDir>/__mocks__'],
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   coverageThreshold: {
     global: {
