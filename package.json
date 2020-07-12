@@ -6,9 +6,9 @@
   "typings": "./build/index.d.ts",
   "scripts": {
     "test": "jest",
-    "test:coverage": "jest -- --coverage",
-    "storybook": "start-storybook",
-    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "test:coverage": "jest --coverage",
+    "storybook": "start-storybook -p 6006",
+    "lint": "tsc --noEmit && eslint './src/**/*.{ts,tsx}'",
     "build": "rimraf build && tsc --build"
   },
   "repository": {
@@ -23,7 +23,9 @@
   "homepage": "https://github.com/dendavidov/ui-kit#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.10",
+    "date-fns": "^2.14.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.9.6"
