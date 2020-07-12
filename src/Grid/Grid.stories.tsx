@@ -45,7 +45,7 @@ const data = {
   ],
   pagination: {
     page: 0,
-    pageSize: 5,
+    pageSize: 10,
     totalEntityCount: 6,
   },
 };
