@@ -4,17 +4,17 @@ import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
-import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 
 import { IGridColumn, IProps, IBasicType, IOwnProps } from './Grid.types';
 import { withStyles } from './Grid.styles';
 import { GridRow } from './GridRow';
+import { Pagination } from './Pagination';
 
 class Grid<T extends IBasicType> extends React.Component<IProps<T>> {
   public render() {
-    const { items, pagination, deleteItem, config, editItem, classes } = this.props;
+    const { items, pagination, deleteItem, config, editItem, classes, fetchItems } = this.props;
 
     return (
       <div className={classes.root}>
@@ -25,7 +25,6 @@ class Grid<T extends IBasicType> extends React.Component<IProps<T>> {
             </Typography>
           </div>
         )}
-
         <Table>
           <TableHead>
             <TableRow>
@@ -56,48 +55,10 @@ class Grid<T extends IBasicType> extends React.Component<IProps<T>> {
             })}
           </TableBody>
         </Table>
-        {pagination && (
-          <TablePagination
-            component="div"
-            count={pagination.totalEntityCount}
-            rowsPerPage={pagination.pageSize}
-            page={pagination.page}
-            backIconButtonProps={{
-              'aria-label': 'Previous Page',
-            }}
-            nextIconButtonProps={{
-              'aria-label': 'Next Page',
-            }}
-            onChangePage={this.handleChangePage}
-            onChangeRowsPerPage={this.handleChangeRowsPerPage}
-          />
-        )}
+        <Pagination fetchItems={fetchItems} pagination={pagination} />
       </div>
     );
   }
-
-  private handleChangePage = (
-    event: React.MouseEvent<HTMLButtonElement> | null,
-    newPage: number,
-  ): void => {
-    const { pagination, fetchItems } = this.props;
-
-    if (!fetchItems || !pagination) {
-      return;
-    }
-
-    fetchItems(newPage, pagination.pageSize);
-  };
-
-  private handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    const { fetchItems } = this.props;
-
-    if (!fetchItems) {
-      return;
-    }
-
-    fetchItems(0, +event.target.value);
-  };
 }
 
 const StyledGrid = withStyles(Grid) as <T extends IBasicType>(

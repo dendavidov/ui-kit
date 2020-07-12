@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { WithStyles } from '@material-ui/core';
 
+import { IPagination } from './Pagination.types';
+
 type Maybe<T> = undefined | null | T;
 
 interface IColumnComponentProps<T> {
@@ -23,12 +25,6 @@ interface IGridConfig<T extends IBasicType> {
 
 interface IBasicType {
   id: string;
-}
-
-interface IPagination {
-  page: number;
-  pageSize: number;
-  totalEntityCount: number;
 }
 
 interface IOwnProps<T extends IBasicType> {
