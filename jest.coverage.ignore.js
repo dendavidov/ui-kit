@@ -1,4 +1,4 @@
-const PERMANENT_IGNORE = ['.types.ts', '.styles.tx', '.stories.tsx'];
+const PERMANENT_IGNORE = ['.types.ts', '.stories.tsx', 'index.ts'];
 
 const TEMPORARY_IGNORE = [];
 

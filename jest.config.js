@@ -17,6 +17,7 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': '<rootDir>/node_modules/babel-jest',
   },
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
   modulePaths: ['src/', 'node_modules'],
   moduleFileExtensions: ['js', 'ts', 'tsx'],
