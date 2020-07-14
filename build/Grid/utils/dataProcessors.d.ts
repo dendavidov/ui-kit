@@ -1,1 +1,2 @@
-export declare const fullTime: (date?: string | number | undefined) => string;
+declare const fullTime: (date?: unknown) => string;
+export { fullTime };
