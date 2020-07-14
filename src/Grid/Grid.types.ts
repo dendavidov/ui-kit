@@ -12,7 +12,7 @@ interface IGridColumn<T extends IBasicType> {
   name: string;
   title: string;
   component?: React.ComponentType<IColumnComponentProps<T>>;
-  format?: (value: unknown) => string;
+  format?: (value?: unknown) => string;
   width?: string | number;
 }
 
