@@ -25,6 +25,8 @@ const useStyles = makeStyles(() => ({
   content: {
     padding: '10px 15px',
     overflow: 'auto',
+    display: 'flex',
+    flex: 1,
   },
   [`@media screen and (max-width: ${breakpointTablet}px)`]: {
     header: {
