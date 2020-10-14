@@ -2,6 +2,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = withStyles(() => ({
   root: {
+    width: '100%',
     '& tr': {
       height: 48,
     },

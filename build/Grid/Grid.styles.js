@@ -4,6 +4,7 @@ exports.withStyles = void 0;
 var styles_1 = require("@material-ui/core/styles");
 var styles = styles_1.withStyles(function () { return ({
     root: {
+        width: '100%',
         '& tr': {
             height: 48,
         },
