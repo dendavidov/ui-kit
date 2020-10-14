@@ -28,6 +28,8 @@ var useStyles = styles_1.makeStyles(function () {
             content: {
                 padding: '10px 15px',
                 overflow: 'auto',
+                display: 'flex',
+                flex: 1,
             }
         },
         _a["@media screen and (max-width: " + breakpointTablet + "px)"] = {
